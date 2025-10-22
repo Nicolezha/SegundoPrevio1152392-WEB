@@ -87,9 +87,4 @@ public class InventoryItem {
     @JsonManagedReference
     private List<Product> products;
 
-    @ManyToOne
-    @JsonBackReference
-    @JoinColumn(name = "favorite_item_id")
-    private FavoriteItem favoriteItem;
-
 }

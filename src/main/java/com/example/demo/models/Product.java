@@ -16,7 +16,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -48,8 +47,8 @@ public class Product {
     @Column(name="price")
     private double price;
 
-    @Column(name="discount_porcentage")
-    private int discountPorcentage;
+    @Column(name="discount_percentage")
+    private int discountPercentage;
 
     @Column(name="stock_quantity")
     private int stockQuantity;
@@ -64,4 +63,8 @@ public class Product {
     @OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
     @JsonManagedReference
     private List<CartItem> cartItems;
+
+    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
+    @JsonManagedReference
+    private List<FavoriteItem> favoriteItems;
 }

@@ -38,7 +38,7 @@ public class Payment {
     @Column(name = "transaction_id")
     private String transactionId;
 
-    @Column(name = "crated_at")
+    @Column(name = "created_at")
     private LocalDate createdAt;
 
     @Column(name = "completed_at")

@@ -39,8 +39,8 @@ public class OrderItem {
     @Column(name = "price")
     private double price;
 
-    @Column(name = "discount_porcentage")
-    private int discountPorcentage;
+    @Column(name = "discount_percentage")
+    private int discountPercentage;
 
     @ManyToOne 
     @JsonBackReference
